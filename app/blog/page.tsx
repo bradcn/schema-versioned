@@ -7,7 +7,7 @@ import Link from "next/link";
 import { DATA } from "@/schema.config";
 
 export const metadata: Metadata = {
-  title: {DATA.siteName} "Blog",
+  title: {DATA.siteName},
 };
 
 export default async function BlogIndexPage() {
