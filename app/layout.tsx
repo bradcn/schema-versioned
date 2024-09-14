@@ -5,7 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Footer } from "@/components/footer";
 import "./globals.css";
-
+import { DATA } from "@/schema.config";
 import dynamic from "next/dynamic";
 
 const VersionContextProvider = dynamic(
@@ -14,10 +14,9 @@ const VersionContextProvider = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: "AriaDocs - Template",
-  metadataBase: new URL("https://ariadocs.vercel.app/"),
-  description:
-    "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
+  title: DATA.siteName,
+  metadataBase: new URL(DATA.siteUrl),
+  description: DATA.siteDescription,
 };
 
 export default function RootLayout({
