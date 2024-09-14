@@ -4,9 +4,10 @@ import { formatDate2, stringToDate } from "@/lib/utils";
 import { ChevronRightIcon, CircleIcon } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { DATA } from "@/schema.config";
 
 export const metadata: Metadata = {
-  title: "AriaDocs - Blog",
+  title: {DATA.siteName} + "Blog",
 };
 
 export default async function BlogIndexPage() {
@@ -19,7 +20,7 @@ export default async function BlogIndexPage() {
     <div className="w-full flex  flex-col gap-5 sm:min-h-[91vh] min-h-[88vh] md:pt-6 pt-2">
       <div className="md:mb-14 mb-8 flex flex-col gap-2 ">
         <h1 className="text-3xl font-extrabold">
-          The latest blogs of this product
+          The latest blogs from us.
         </h1>
         <p className="text-muted-foreground">
           All the latest blogs and news, straight from the team.
