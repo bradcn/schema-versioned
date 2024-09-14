@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { HeartIcon, HexagonIcon, TriangleIcon } from "lucide-react";
+import { DATA } from "@/schema.config";
 
 export function Footer() {
   return (
@@ -14,44 +15,19 @@ export function Footer() {
               className="px-1 underline underline-offset-2"
               href="https://github.com/nisabmohd"
             >
-              nisabmohd
+              {DATA.authorName}
             </Link>
             . The source code is available on{" "}
             <Link
               className="px-1 underline underline-offset-2"
-              href="https://github.com/nisabmohd/Aria-Docs"
+              href={DATA.authorUrl}
             >
               GitHub
             </Link>
             .
           </p>
         </div>
-
-        <div className="gap-4 items-center hidden md:flex">
-          <FooterButtons />
-        </div>
       </div>
     </footer>
-  );
-}
-
-export function FooterButtons() {
-  return (
-    <>
-      <Link
-        href="https://vercel.com/templates/next.js/documentation-template"
-        className={buttonVariants({ variant: "outline", size: "sm" })}
-      >
-        <TriangleIcon className="h-[0.8rem] w-4 mr-2 text-primary fill-current" />
-        Deploy
-      </Link>
-      <Link
-        href="https://github.com/sponsors/nisabmohd"
-        className={buttonVariants({ variant: "outline", size: "sm" })}
-      >
-        <HeartIcon className="h-4 w-4 mr-2 text-red-600 fill-current" />
-        Sponsor
-      </Link>
-    </>
   );
 }
