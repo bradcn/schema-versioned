@@ -2,13 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BlogMdxFrontmatter, getAllBlogs } from "@/lib/markdown";
 import { formatDate2, stringToDate } from "@/lib/utils";
 import { ChevronRightIcon, CircleIcon } from "lucide-react";
-import { Metadata } from "next";
 import Link from "next/link";
-import { DATA } from "@/schema.config";
-
-export const metadata: Metadata = {
-  title: {DATA.siteName},
-};
 
 export default async function BlogIndexPage() {
   const blogs = (await getAllBlogs()).sort(
