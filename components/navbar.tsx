@@ -14,6 +14,7 @@ import { SheetClose } from "@/components/ui/sheet";
 import NavGetStarted from "./nav-get-started";
 import dynamic from "next/dynamic";
 import { ReactNode } from "react";
+import { DATA } from "@/schema.config";
 
 const VersionManager = dynamic(() => import("./version-select"), {
   ssr: false,
@@ -78,15 +79,6 @@ export function Navbar() {
               >
                 <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
               </Link>
-              <Link
-                href="#"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-              >
-                <TwitterIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
               <ModeToggle />
             </div>
           </div>
@@ -100,7 +92,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
       <HexagonIcon className="w-7 h-7 text-muted-foreground fill-current" />
-      <h2 className="text-md font-bold">AriaDocs</h2>
+      <h2 className="text-md font-bold">{DATA.siteName}</h2>
     </Link>
   );
 }
