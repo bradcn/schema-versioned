@@ -13,18 +13,10 @@ export function Footer() {
             Build by{" "}
             <Link
               className="px-1 underline underline-offset-2"
-              href="https://github.com/nisabmohd"
+              href={DATA.authorUrl}
             >
               {DATA.authorName}
             </Link>
-            . The source code is available on{" "}
-            <Link
-              className="px-1 underline underline-offset-2"
-              href={DATA.authorUrl}
-            >
-              GitHub
-            </Link>
-            .
           </p>
         </div>
       </div>
